@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIYI's MART</title>
+  <!-- <link rel="stylesheet" href="biyistyle.css"> -->
+  <link rel="stylesheet" href="biyistyle2.css">
+  <script src="biyi.js"></script>
+</head>
+
+<body>
+  <section id="header">
+
+    <!-- Comapny's Logo section -->
+    <div class="logo">
+      <h1><span>SPOTLIGHT</span><br>SUPERMARKET</h1>
+    </div>
+
+    <!-- The search section -->
+    <div class="searchicon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+        viewBox="0 0 16 16">
+        <path
+          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+      </svg>
+      <input type="text" name="search" id="tarea" placeholder="Search products, brands and categories">
+    </div>
+
+    <!-- Search button section -->
+    <div class="searchbtn">
+      <button type="submit">SEARCH</button>
+    </div>
+
+    <!-- Navbar Account  section -->
+    <div class="secaccount relative" onclick="myAccount()">
+              <a href="#" id="account">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="person"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+                <p id="own">Account</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>
+              </a>
+
+            <!-- dropdown signin section -->
+              <div id="account-button" class="absolute not-visible">
+                <p id="signin" onclick="mySignin()"><a href="#">SIGN IN</a></p> <hr>
+
+            <!-- dropdown my account section -->
+              <div class="myacc-sec" onclick="myAccSec()">
+                <a href="#" id="myacc">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="person"
+                viewBox="0 0 16 16">
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+              </svg>
+                <p>My Account</p>
+              </a>
+              </div>
+
+            <!-- dropdown orders section -->
+            <div class="myorders" onclick="myOrders()">
+              <a href="#" id="myorder">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2" viewBox="0 0 16 16"> <path d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3L2.95.4ZM7.5 1H3.75L1.5 4h6V1Zm1 0v3h6l-2.25-3H8.5ZM15 5H1v10h14V5Z"/> </svg>
+              <p id="order-txt">Orders</p>
+            </a>
+            </div>
+
+          <!-- dropdown saved items section -->
+          <div class="saveditems" onclick="savedItems()">
+            <a href="#" id="saveditems">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16"> <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/> </svg>
+              <p id="s-items">Saved Items</p>
+
+            </a>
+          </div>
+          </div>
+    </div>
+    <!-- Navbar Help  section -->
+    <div class="sechelp relate" onclick="askHelp()">
+            <a href="#" id="help">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="question" viewBox="0 0 16 16">
+                <path d="M8.05 9.6c.336 0 .504-.24.554-.627.04-.534.198-.815.847-1.26.673-.475 1.049-1.09 1.049-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745z"/>
+                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+                <path d="M7.001 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
+              </svg>
+            <p id="own-help">Help</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+      
+          <!-- dropdown help section -->
+            <div id="help-button" class="solute no-visible">
+              <p><a href="#">Help Center</a></p>
+              <p><a href="#">Place & Track Order</a></p>
+              <p><a href="#">Order Cancellation</a></p>
+              <p><a href="#">Returns and Funds</a></p>
+              <p><a href="#">Payment & Biyi's Account</a></p>
+
+              <p id="live-chat" onclick="liveChat()"><a href="#">Live Chat</a></p>
+
+            </a>
+            </div>
+      
+            <div id="cart" onclick="myCart()">
+              <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                  </svg>
+                  <p id="mycart">Cart</p>
+              </a>
+            </div>
+  </section>
+
+  <!-- Ads left section -->
+  <div class="section2">
+      <div class="firstrow">
+        <div class="list-one">
+          <a href="#">
+          <img src="supermarket.png" alt="list">
+          <h3 id="supermarket">Supermarket</h3>
+          </a>
+        </div>
+        <div class="list-two">
+          <a href="#">
+          <img src="health&beauty.png" alt="list">
+          <h3 id="health-beauty">Health & Beauty</h3>
+          </a>
+        </div>
+        <div class="list-three">
+          <a href="#">
+          <img src="babyproduct.png" alt="list">
+          <h3 id="baby-product">Baby Product</h3>
+          </a>
+        </div>
+        <div class="list-four">
+          <a href="#">
+          <img src="phone&tablets.png" alt="list">
+          <h3 id="beverages">Beverages</h3>
+          </a>
+        </div>
+        <div class="list-five">
+          <a href="#">
+          <img src="computing.png" alt="list">
+          <h3 id="computing">Computing</h3>
+          </a>
+        </div>
+        <div class="list-six">
+          <a href="#">
+          <img src="supermarket.png" alt="list">
+          <h3 id="electronics">Electronics</h3>
+          </a>
+        </div>
+        <div class="list-seven">
+          <a href="#">
+          <img src="supermarket.png" alt="list">
+          <h3 id="super">Fashion</h3>
+          </a>
+        </div>
+
+      </div>
+
+  <div class="secondrow">
+
+    <!-- <img src="storepc1.jpg" alt="womenpics"> -->
+  </div>
+
+  <div class="thirdrow">
+    <div class="pic1">
+      <!-- <img src="woman1.png" alt=""> -->
+    </div>
+    <div class="pic2">
+      <!-- <img src="woman2.png" alt=""> -->
+    </div>
+  </div>
+</div>
+
+<div class="randomitems">
+    <a href="#" id="leftarrow" onclick="leftarrow()"><img src="left.png" alt="left arrow"></a>
+    <a href="#"><img src="frontphone.png" alt="phone pic"></a>
+    <a href="#"><img src="frontfridge.png" alt="phone pic"></a>
+    <a href="#"><img src="fronttv.png" alt="phone pic"></a>
+    <a href="#"><img src="frontrice.png" alt="phone pic"></a>
+    <a href="#"><img src="frontspeaker.png" alt="phone pic"></a>
+    <a href="#"><img src="frontsneakers.png" alt="phone pic"></a>
+    <a href="#"><img src="frontbestseller.png" alt="phone pic"></a>
+    <a href="#"><img src="frontcream.png" alt="phone pic"></a>
+    <a href="#" id="rightarrow" onclick="rightarrow()"><img src="right.png" alt="right arrow"></a>
+  </div>
+
+<!-- <div class="container">
+  <div class="row">
+      <div id="modal-container3" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content col-sm-8 col-lg-offset-2">
+              </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+  <script src="biyi.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="modal-container3" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content col-sm-8 col-lg-offset-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+            $(document).on('show.bs.modal', '.modal', function() {
+                var zIndex = 1040 + (10 * $('.modal:visible').length);
+                $(this).css('z-index', zIndex);
+                setTimeout(function() {
+                    $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
+                }, 0);
+            });
+    
+            // Initialize popover
+            $(function() {
+                $('[data-toggle="popover"]').popover({ html: true });
+            });
+    
+            // Used for modals
+            $(function() {
+                // Initialize modal dialog
+                // attach modal-container bootstrap attributes to links with .modal-link class.
+                // when a link is clicked with these attributes, bootstrap will display the href content in a modal dialog.
+    
+                $('body').on('change', '.modal-link3', function (e) {
+                    e.preventDefault();
+                    $(this).attr('data-target', '#modal-container3');
+                    $(this).attr('data-toggle', 'modal');
+                });
+    
+                // Attach listener to .modal-close-btn's so that when the button is pressed the modal dialog disappears
+                $('body').on('click', '.modal-close-btn', function() {
+                    $('#modal-container').modal('hide');
+                });
+                //clear modal cache, so that new content can be loaded
+                $('#modal-container3').on('hidden.bs.modal', function() {
+                    $(this).removeData('bs.modal');
+                });
+                $('#CancelModal').on('click', function() {
+                    return false;
+                });
+            });
+    
+        </script>
+</body>
+</html>

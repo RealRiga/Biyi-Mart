@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;700;800;900&display=swap');
+* {
+	font-family: 'Chivo Mono', monospace;
+}
+body{
+	
+}
+#header{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	/* margin-left: -50px; */
+	border: 10px outset	 rgb(241, 8, 217);
+	border-radius: 15px;
+	background-color: rgb(239, 233, 233);
+}
+
+/* Company's Logo section */
+.logo{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.logo >*{
+	color: rgb(241, 8, 217);
+	font-size: medium;
+	font-style: italic;
+}
+.logo span{
+	font-style: italic;
+	color: orange;
+
+}
+
+/* Search section */
+.searchicon {
+    display: flex;
+    position: relative;
+}
+.searchicon svg{
+    color: black;
+	position: absolute;	
+	left: 45px;
+	top: 16px;
+	z-index: 100;
+}
+#tarea{
+	border-color: rgb(229, 218, 218);
+	border-radius: 4px;
+	width: 500px;
+	height: 45px;
+	padding-left: 40px;
+	margin-left: 30px;
+}
+input:active{
+	background-color: rgb(229, 218, 218);
+    text-decoration: none;
+}
+.searchbtn button{
+	color: white;
+	font-weight: 700;
+	background-color: rgb(241, 8, 217);
+	border-radius: 5px;
+	border:rgb(241, 8, 217); 
+	width: 100px;
+	height: 45px;
+	margin-left: 20px;
+}
+.searchbtn button:hover{
+	background-color: rgb(131, 6, 118);
+}
+
+/* Account section */
+/* .paccount{
+	display: flex;
+	align-items: center;
+} */
+.secaccount{
+	display: flex;
+	align-items: center;
+	margin-left: 17px;
+}
+.secaccount a:link{
+	text-decoration: none;
+}
+#account {
+	display: flex;
+	align-items: center;
+	color: black;
+}
+#account > * + * {
+	padding-left: 6px;
+}
+#account-button{
+	padding-left: 21px;
+	padding-right: 17px;
+	margin-left: -12px;
+	height: 250px; 
+	width: 150px; 
+	border: 2px outset white;
+	border-radius: 10px;
+	background-color: white;
+}
+
+/* Account dropdown section */
+.relative {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+	left: -30%;
+	top: 100%;
+}
+.visible {
+	display: block;
+}
+.not-visible {
+	display: none;
+}
+#signin{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 400;
+	background-color: rgb(243, 127, 85);
+	border-radius: 5px;
+	border:rgb(243, 127, 85); 
+	width: 130px;
+	height: 40px;
+}
+#signin a {
+	color: white;
+}
+
+/* Dropdown My Account Section */
+#myacc {
+	display: flex;
+	justify-content: space-around;
+	color: black;
+	align-items: center;
+}
+
+/* Dropdown Orders Section */
+#myorder {
+	display: flex;
+	justify-content: space-around;
+	color: black;
+	align-items: center;
+}
+#order-txt {
+	margin-right: 36px;
+}
+
+/* Dropdown Saved Items */
+#saveditems {
+	display: flex;
+	justify-content: space-around;
+	color: black;
+	align-items: center;
+}
+#s-items{
+	margin-right: -12px;
+}
+
+/* Help Section */
+/* .paccount{
+	display: flex;
+	align-items: center;
+} */
+.sechelp{
+	display: flex;
+	align-items: center;
+	margin-left: 47px;
+}
+.sechelp a:link{
+	text-decoration: none;
+}
+#help {
+	display: flex;
+	align-items: center;
+	color: black;
+}
+#help > * + * {
+	padding-left: 8px;
+}
+#help-button{
+	padding-left: 31px;
+	padding-right: 17px;
+	margin-left: -15px;
+	height: 320px; 
+	width: 150px; 
+	border: 2px outset white;
+	border-radius: 10px;
+	background-color: white;
+}
+
+/* help dropdown section */
+.relate {
+	position: relative;
+}
+.solute {
+	position: absolute;
+	left: -30%;
+	top: 100%;
+}
+.now-visible {
+	display: block;
+}
+.no-visible {
+	display: none;
+}
+#help-button a{
+	color: black;
+	font-size: medium;
+}
+#live-chat{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 400;
+	background-color: rgb(243, 127, 85);
+	border-radius: 5px;
+	border:rgb(243, 127, 85); 
+	width: 130px;
+	height: 40px;
+}
+#live-chat a {
+	color: white;
+}
+
+/* Cart Section */
+#cart a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 30px;
+	color: black;
+}
+#cart a > * + * {
+	padding-left: 10px;
+}
+
+/* Ads Left Section */
+
+
+/* Section Two  First Row*/
+.section2{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	margin-left: 156px;
+	margin-right: 150px;
+}
+.section2 img{
+	width: 30px;
+	height: 20px;
+	margin-right: 10px;
+
+}
+.firstrow{
+	border: 2px outset orangered;
+}
+.firstrow a{
+	text-decoration: none;
+	color: black;
+}
+/* Section2 list-one */
+.list-one a{
+	display: flex;
+	/* text-decoration: none;
+	color: black; */
+}
+#supermarket{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+/* Section Two list-two */
+.list-two a{
+	display: flex;
+	/* text-decoration: none; */
+}
+#health-beauty{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+/* Section Two list-three */
+.list-three a{
+	display: flex;
+	/* text-decoration: none; */
+}
+#baby-product{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+/* Section Two list-four */
+.list-four a{
+	display: flex;
+	/* text-decoration: none; */
+}
+#beverages{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+/* Section Two list-five */
+.list-five a{
+	display: flex;
+	/* text-decoration: none; */
+}
+#computing{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+/* Section Two list-six*/
+.list-six a{
+	display: flex;
+	/* text-decoration: none; */
+}
+#electronics{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+/* Section Two list-seven */
+.list-seven a{
+	display: flex;
+	/* text-decoration: none; */
+}
+#super{
+	font-weight: lighter;
+	font-size: small;
+	margin-top: 5px;
+}
+
+
+
+.secondrow{
+	border: 2px solid orange;
+	width: 700px;
+	height: 58vh;
+	background-color: hsla(272, 62%, 49%, 0.5);
+}
+.thirdrow{
+	display: block;
+}
+.pic1{
+	border: 2px solid orange;
+	height: 198px;
+	width: 287px;
+	margin-bottom: 33px;
+ 
+}
+.pic2{
+	border: 2px solid orange;
+	height: 198px;
+	width: 287px;
+}
+
+.randomitems{
+	border: 2px solid red;
+	width: 1213px;
+	height: 20vh;
+	margin-top: 20px;
+	margin-left: 155px;
+}
+.randomitems img{
+	width: 115px;
+	height: 145px;
+	margin-left: 10px;
+}
+#leftarrow img{
+	margin-bottom: 50px;
+	width: 40px;
+	height: 40px;
+}
+#rightarrow img{
+	margin-bottom: 50px;
+	width: 40px;
+	height: 40px;
+}
