@@ -11,7 +11,7 @@
   <script src="/js/biyi.js"></script>
 </head>
 
-<body>
+<body id="whole" onload="myWhole()">
   <section id="header">
 
     <!-- Comapny's Logo section -->
@@ -19,6 +19,7 @@
       <h1><span>SPOTLIGHT</span><br>SUPERMARKET</h1>
     </div>
     
+
 
     <!-- The search section -->
     <div class="searchicon">
@@ -118,6 +119,13 @@
                   </svg>
                   <p id="mycart">Cart</p>
               </a>
+            </div>
+
+            <!-- Toggle section -->
+            <div id="backgroundtogglebtn" onclick="changeBackground()">
+              <div class="togglecircle">
+                
+              </div>
             </div>
   </section>
 

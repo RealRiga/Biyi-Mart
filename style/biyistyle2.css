@@ -172,7 +172,7 @@ input:active{
 .sechelp{
 	display: flex;
 	align-items: center;
-	margin-left: 47px;
+	margin-left: 17px;
 }
 .sechelp a:link{
 	text-decoration: none;
@@ -188,7 +188,7 @@ input:active{
 #help-button{
 	padding-left: 31px;
 	padding-right: 17px;
-	margin-left: -15px;
+	margin-left: -1px;
 	height: 320px; 
 	width: 150px; 
 	border: 2px outset white;
@@ -236,11 +236,23 @@ input:active{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-left: 30px;
+	padding-left: 18px;
 	color: black;
 }
 #cart a > * + * {
 	padding-left: 10px;
+}
+
+/* Background Toggle Button */
+#backgroundtogglebtn{
+	display: flex;
+	justify-content: space-around;
+}
+#colorpicker{
+	margin-top: 6px;
+	margin-left: 7px;
+	width: 40px;
+	height: 30px;
 }
 
 /* Ads Left Section */
